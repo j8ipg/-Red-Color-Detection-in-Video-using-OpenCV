@@ -28,7 +28,7 @@ Make sure Python is installed, then install the dependencies:
 pip install opencv-python numpy imageio
 
 
-ططط
+
 ## ▶️ How to Run
 1.Clone or download this repository.
 
@@ -60,15 +60,16 @@ python red_color_detection.py
 
 .Each processed frame is stored and then saved as a GIF using imageio.
 
-## code i used:
+## 💻 Code Used
+
 '''import cv2
 import numpy as np
 import imageio
 
-# تحميل الفيديو
+#تحميل الفيديو
 cap = cv2.VideoCapture('7565889-hd_1080_1920_25fps.mp4')
 
-# قائمة لتخزين الفريمات
+#قائمة لتخزين الفريمات
 frames_for_gif = []
 
 while True:
@@ -79,7 +80,7 @@ while True:
     frame = cv2.resize(frame, (640, 480))
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # نطاق الأحمر
+    #نطاق الأحمر
     lower_red = np.array([0, 150, 100])
     upper_red = np.array([10, 255, 255])
     mask1 = cv2.inRange(hsv, lower_red, upper_red)
@@ -102,7 +103,7 @@ while True:
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             cv2.putText(frame, "Red Object", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-    # تحويل اللون من BGR إلى RGB وحفظ الفريم
+    #تحويل اللون من BGR إلى RGB وحفظ الفريم
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     frames_for_gif.append(rgb_frame)
 
@@ -113,12 +114,14 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 '''
-# حفظ النتيجة كـ gif
+#حفظ النتيجة كـ gif
 imageio.mimsave("output.gif", frames_for_gif, fps=10)
 print("✅ Saved as output.gif")
 
 ## 📸 Output Preview
 The script generates a file called output.gif showing the processed video with red objects labeled like this:
+
+
 vid:
 
 
@@ -127,6 +130,8 @@ https://github.com/user-attachments/assets/fae719aa-ae4b-4a08-8364-e30979442fd8
 
 
 pic:
+
+
 <img width="1366" height="836" alt="red colar" src="https://github.com/user-attachments/assets/741c0dbc-86d0-4891-a5d4-2a1cad1a1267" />
 
 
