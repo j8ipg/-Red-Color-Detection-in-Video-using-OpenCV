@@ -24,9 +24,10 @@ To detect and highlight red objects in a video file by applying color masking an
 
 Make sure Python is installed, then install the dependencies:
 
-```bash
+
 pip install opencv-python numpy imageio
-'''
+
+
 ططط
 ## ▶️ How to Run
 1.Clone or download this repository.
@@ -119,11 +120,15 @@ print("✅ Saved as output.gif")
 ## 📸 Output Preview
 The script generates a file called output.gif showing the processed video with red objects labeled like this:
 vid:
-https:
- //github.com/user-attachments/assets/c3729ae6-1d62-4482-82a3-c801b2f8fde8
+
+
+https://github.com/user-attachments/assets/fae719aa-ae4b-4a08-8364-e30979442fd8
+
+
 
 pic:
+<img width="1366" height="836" alt="red colar" src="https://github.com/user-attachments/assets/741c0dbc-86d0-4891-a5d4-2a1cad1a1267" />
 
-<img width="1366" height="836" alt="red colar" src="https://github.com/user-attachments/assets/957d021d-74b4-415e-8ce5-3a35ccfeb7cc" />
+
 
 
