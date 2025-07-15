@@ -121,8 +121,11 @@ cv2.destroyAllWindows()
 # Save output as GIF
 imageio.mimsave("output.gif", frames_for_gif, fps=10)
 print("✅ Saved as output.gif")
-'''
+```
+
+
 ---
+
 
 ## 📸 Output Preview
 The script generates a file called output.gif showing the processed video with red objects labeled like this:
