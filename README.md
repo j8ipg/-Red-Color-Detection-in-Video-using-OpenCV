@@ -62,7 +62,7 @@ python red_color_detection.py
 
 ## 💻 Code Used
 
-'''import cv2
+''' import cv2
 import numpy as np
 import imageio
 
