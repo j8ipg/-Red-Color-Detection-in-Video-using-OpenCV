@@ -27,7 +27,7 @@ Make sure Python is installed, then install the dependencies:
 
 pip install opencv-python numpy imageio
 
-
+---
 
 ## ▶️ How to Run
 1.Clone or download this repository.
@@ -37,7 +37,7 @@ pip install opencv-python numpy imageio
 3.Place the video file in the same folder as the script.
 
 4.Run the Python script:
-تحرير
+
 python red_color_detection.py
 
 5.A window will open showing the processed video with detected red objects highlighted.
@@ -46,6 +46,7 @@ python red_color_detection.py
 
 7.The result will be saved as output.gif in the same folder.
 
+---
 
 ## 🔍 How It Works
 .The script reads video frames one by one.
@@ -60,16 +61,19 @@ python red_color_detection.py
 
 .Each processed frame is stored and then saved as a GIF using imageio.
 
+---
+
 ## 💻 Code Used
 
-''' import cv2
+```python
+import cv2
 import numpy as np
 import imageio
 
-#تحميل الفيديو
+# Load the video
 cap = cv2.VideoCapture('7565889-hd_1080_1920_25fps.mp4')
 
-#قائمة لتخزين الفريمات
+# List to store frames for the GIF
 frames_for_gif = []
 
 while True:
@@ -80,7 +84,7 @@ while True:
     frame = cv2.resize(frame, (640, 480))
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    #نطاق الأحمر
+    # Red color range
     lower_red = np.array([0, 150, 100])
     upper_red = np.array([10, 255, 255])
     mask1 = cv2.inRange(hsv, lower_red, upper_red)
@@ -103,7 +107,7 @@ while True:
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             cv2.putText(frame, "Red Object", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-    #تحويل اللون من BGR إلى RGB وحفظ الفريم
+    # Convert to RGB and store frame
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     frames_for_gif.append(rgb_frame)
 
@@ -113,10 +117,12 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-'''
-#حفظ النتيجة كـ gif
+
+# Save output as GIF
 imageio.mimsave("output.gif", frames_for_gif, fps=10)
 print("✅ Saved as output.gif")
+'''
+---
 
 ## 📸 Output Preview
 The script generates a file called output.gif showing the processed video with red objects labeled like this:
