@@ -2,6 +2,9 @@
 
 This project uses **OpenCV** and **NumPy** to detect red-colored objects in a video, highlight them with bounding boxes, and save the result as an animated GIF. It's a simple yet effective demonstration of color recognition using the HSV color space.
 
+
+<img width="1366" height="836" alt="red colar" src="https://github.com/user-attachments/assets/741c0dbc-86d0-4891-a5d4-2a1cad1a1267" />
+
 ---
 
 ## 🎯 Project Goal
